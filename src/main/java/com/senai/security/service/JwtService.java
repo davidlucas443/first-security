@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class JwtService {
 
-    private final String SECRET = "minhachavesupersecretacommaisde32caracteresparadarcerto";
+    private final String SECRET = "minhachavesupersecretacommaisde32caracteresparadarcertooooooo";
 
     public String gerarToken(String email){
 
