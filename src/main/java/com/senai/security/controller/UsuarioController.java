@@ -3,13 +3,9 @@ import com.senai.security.dto.UsuarioRequestDto;
 import com.senai.security.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("usuario")
 public class UsuarioController {
 
     private final UsuarioService usuarioService;
@@ -18,9 +14,13 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @PostMapping
+    @PostMapping("/users")
     public ResponseEntity criarUsuario (@Valid @RequestBody UsuarioRequestDto dto){
         return ResponseEntity.ok(usuarioService.criarUsuario(dto));
+    }
+    @GetMapping("/admin")
+    public String admin(){
+        return "Acesso Admin";
     }
 
 }

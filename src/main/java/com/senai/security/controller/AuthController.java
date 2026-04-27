@@ -1,6 +1,5 @@
 package com.senai.security.controller;
 
-
 import com.senai.security.dto.LoginDto;
 import com.senai.security.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
